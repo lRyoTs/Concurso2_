@@ -73,6 +73,11 @@ public class music_manager : MonoBehaviour
         UpdateSongName();
     }
 
+
+    public void RestartSong() {
+        _audioSource.Stop();
+        PlaySong();
+    }
     //Function that updates song info
     public void UpdateSongName() {
         artistText.text = artists[currentSong]; //update artist name
